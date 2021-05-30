@@ -13,7 +13,7 @@ namespace SGCondo.Data.Repository
             Context = context;
         }
 
-        public async Task<TEntity> GetOne(params object[] id) => await Context.Set<TEntity>().FindAsync(id);
+        public async virtual Task<TEntity> GetOne(params object[] id) => await Context.Set<TEntity>().FindAsync(id);
 
         public DbSet<T> Set<T>() where T : class => Context.Set<T>();
 

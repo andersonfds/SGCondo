@@ -21,7 +21,9 @@ namespace SGCondo.API
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.SetupMappingProfile();
             services.RegisterDatabases();
+            services.RegisterUoWs();
             services.AddControllers();
             services.Load();
             services.AddSwaggerGen(c =>

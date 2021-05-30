@@ -27,6 +27,8 @@ namespace SGCondo.Data.DataContext
             base.OnModelCreating(builder);
 
             builder.ApplyConfiguration(new ApartmentMap());
+            builder.ApplyConfiguration(new CondominiumMap());
+            builder.ApplyConfiguration(new ResidentMap());
         }
 
         #endregion Configuration

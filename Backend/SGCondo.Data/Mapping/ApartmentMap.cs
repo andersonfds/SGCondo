@@ -9,6 +9,9 @@ namespace SGCondo.Data.Mapping
         public override void Configure(EntityTypeBuilder<Apartment> builder)
         {
             builder.HasKey(x => x.Id);
+            builder
+                .HasMany(e => e.Residents)
+                .WithOne();
         }
     }
 }

@@ -14,5 +14,7 @@ namespace SGCondo.Domain
         public string CPF { get; set; }
 
         public string Email { get; set; }
+
+        public Guid ApartmentId { get; set; }
     }
 }

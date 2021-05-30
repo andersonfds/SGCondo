@@ -9,6 +9,6 @@ namespace SGCondo.Domain
 
         public string Address { get; set; }
 
-        public IEnumerable<Apartment> Apartments { get; set; }
+        public virtual IEnumerable<Apartment> Apartments { get; set; }
     }
 }
