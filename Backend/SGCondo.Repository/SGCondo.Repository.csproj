@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SGCondo.Data\SGCondo.Data.csproj" />
+    <ProjectReference Include="..\SGCondo.Domain\SGCondo.Domain.csproj" />
+    <ProjectReference Include="..\SGCondo.Framework\SGCondo.Framework.csproj" />
+    <ProjectReference Include="..\SGCondo.Repoitory.Infra\SGCondo.Repository.Infra.csproj" />
+  </ItemGroup>
+
+</Project>
