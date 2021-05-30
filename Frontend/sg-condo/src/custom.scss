@@ -1,0 +1,12 @@
+body,
+html,
+#root {
+    height: 100%;
+    overflow: hidden;
+}
+
+.scroll {
+    overflow-y: auto;
+}
+
+@import "bootstrap/scss/bootstrap.scss";

@@ -1,0 +1,22 @@
+.app-bar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+}
+
+.condo-card {
+    border-radius: 8px;
+
+    &.active {
+        background-color: #fe0;
+    }
+}
+
+.expressive,
+.condo-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tall-box {
+    min-height: 200px;
+}
