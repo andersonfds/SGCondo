@@ -1,6 +1,10 @@
 .app-bar {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     background-color: #fff;
+    box-shadow: 0  10px 24px #fff;
+}
+
+.separator {
+    border-bottom: 1px solid #efefef;
 }
 
 .condo-card {
@@ -9,6 +13,11 @@
     &.active {
         background-color: #fe0;
     }
+}
+
+.app-title-logo {
+    font-size: 14pt;
+    font-weight: bold;
 }
 
 .expressive,

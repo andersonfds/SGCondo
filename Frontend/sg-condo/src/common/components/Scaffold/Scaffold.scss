@@ -1,0 +1,119 @@
+$menu-duration: 200ms;
+$menu-width: 260px;
+$border-color: #eee;
+
+.custom-dropdown {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+}
+
+#account-data::after {
+    display: none;
+}
+
+.menu-items {
+    ul {
+        padding: 30px 0;
+
+        li {
+            display: block;
+            padding: 20px 30px;
+            cursor: pointer;
+            margin: 4px 0;
+            transition: background 50ms linear;
+            
+            span {
+                margin: 0 10px;
+            }
+
+            &.active {
+                background-color: #1684c4c2;
+            }
+
+            &:hover {
+                background-color: rgba(0,0,0,0.1);
+            }
+        }
+    }
+}
+
+.menu-search {
+    color: #fff;
+    width: 100%;
+    border: none;
+    font-size: large;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 6px 25px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    outline: 0;
+    transition: background 200ms linear;
+}
+
+.menu-search:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.menu-search::placeholder {
+    color: #fff;
+}
+
+.responsive-menu {
+    color: #fff;
+    background-color: #293688;
+}
+
+.header-container {
+    background-color: #fff;
+    z-index: 1;
+    border-bottom: 1px solid $border-color;
+}
+
+@media screen and (max-width: 991px) {
+    .fixed-md-left {
+        position: fixed;
+        left: 0;
+        z-index: 5;
+    }
+
+    .overflow {
+        background-color: #000;
+        opacity: 0.5;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        pointer-events: fill;
+        transition: opacity $menu-duration;
+    }
+
+    .responsive-menu {
+        width: $menu-width;
+        max-width: 80%;
+        transition: all $menu-duration;
+        overflow: hidden;
+        box-shadow: 10px 0 6px rgba(0, 0, 0, 0.1);
+
+        .responsive-menu-container {
+            width: $menu-width;
+            box-sizing: border-box;
+        }
+    }
+
+    .menu-container:not(.menu-active) {
+        .overflow {
+            opacity: 0;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .responsive-menu {
+            width: 0px;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
