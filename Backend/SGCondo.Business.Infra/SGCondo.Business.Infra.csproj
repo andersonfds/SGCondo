@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SGCondo.Domain\SGCondo.Domain.csproj" />
+    <ProjectReference Include="..\SGCondo.Repoitory.Infra\SGCondo.Repository.Infra.csproj" />
   </ItemGroup>
 
 </Project>

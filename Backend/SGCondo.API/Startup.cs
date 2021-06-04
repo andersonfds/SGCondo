@@ -41,11 +41,15 @@ namespace SGCondo.API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SGCondo.API v1"));
             }
 
+            app.UseCors(options => options.AllowAnyOrigin());
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCustomExceptionHandler();
 
             app.UseEndpoints(endpoints =>
             {

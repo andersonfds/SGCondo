@@ -4,7 +4,7 @@ using SGCondo.Domain;
 
 namespace SGCondo.API.Infra.Mapping
 {
-    public class DomainViewModelMappingProfile: Profile
+    public class DomainViewModelMappingProfile : Profile
     {
         public DomainViewModelMappingProfile()
         {

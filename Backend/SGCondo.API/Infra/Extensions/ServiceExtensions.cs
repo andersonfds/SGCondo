@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using SGCondo.API.Infra.Exceptions;
 using SGCondo.API.Infra.Mapping;
 using SGCondo.API.UoW;
 using SGCondo.Data.DataContext;
@@ -38,6 +40,12 @@ namespace SGCondo.API.Infra.Extensions
             #endregion Mapping Profile
 
             return services;
+        }
+
+        public static IApplicationBuilder UseCustomExceptionHandler(this IApplicationBuilder app)
+        {
+            app.UseMiddleware<ExceptionMiddleware>();
+            return app;
         }
     }
 }

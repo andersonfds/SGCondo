@@ -8,6 +8,7 @@ namespace SGCondo.CrossCutting.IoC
         {
             services.LoadRepository();
             services.LoadBusiness();
+            services.LoadSingleton();
             return services;
         }
     }
