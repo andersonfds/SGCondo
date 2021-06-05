@@ -20,7 +20,7 @@ namespace SGCondo.Repository
             string name = querySpec?.Name ?? string.Empty;
             var query = from condo in Set<Condominium>()
                         where
-                            EF.Functions.Like(condo.Name, $"%{name}%")
+                           (EF.Functions.Like(condo.Name, $"%{name}%") || name == null)
                         select condo;
 
             return await query.Paginate(querySpec).ToListAsync();

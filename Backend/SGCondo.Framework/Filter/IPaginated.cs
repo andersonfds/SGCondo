@@ -12,7 +12,7 @@
         {
             get
             {
-                if (Results <= 0 || Page <= 0)
+                if (Results <= 0 || Page - 1 <= 0)
                     return 0;
 
                 return Page * Results;

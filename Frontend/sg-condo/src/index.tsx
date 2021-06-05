@@ -1,25 +1,12 @@
-import { createBrowserHistory } from 'history';
+import * as dotenv from 'dotenv';
 import ReactDOM from 'react-dom';
-import { Route, Router, Switch } from 'react-router';
-import LoginPage from './common/routes/LoginPage/LoginPage';
+import App from './App';
 import './custom.scss';
 import reportWebVitals from './reportWebVitals';
-import * as dotenv from 'dotenv';
-import HomePage from './common/routes/HomePage/HomePage';
 
 dotenv.config();
 
-ReactDOM.render(
-  (
-    <Router history={createBrowserHistory()}>
-      <Switch>
-        <Route exact path="/"><LoginPage /></Route>
-        <Route path="/home"><HomePage /></Route>
-      </Switch>
-    </Router>
-  ),
-  document.getElementById('root')
-);
+ReactDOM.render((<App />), document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

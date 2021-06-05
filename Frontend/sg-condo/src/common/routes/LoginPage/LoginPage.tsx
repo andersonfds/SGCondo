@@ -27,7 +27,6 @@ export default function LoginPage() {
                     </form>
                 </div>
             </div>
-            <img src="assets/login-bg.svg" className="logo" />
         </div>
     );
 }

@@ -43,7 +43,7 @@ namespace SGCondo.API
 
             app.UseCors(options => options.AllowAnyOrigin());
 
-            app.UseHttpsRedirection();
+           // app.UseHttpsRedirection();
 
             app.UseRouting();
 
